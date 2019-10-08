@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h3>API List</h3>
+    <div class="row onePadding">
+        <div class="col-md-12 col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-condensed">
+                    <tr>
+                        <th>Route</th>
+                        <th>Methods</th>
+                    </tr>
+                    {% for d in data['routes'] %}
+                        <tr>
+                            <td>{{ d['route'] }}</td>
+                            <td>{{ d['methods'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
